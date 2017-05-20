@@ -1,0 +1,43 @@
+IPV4
+#wannacry-malware randsomewhere(ms17-010)
+
+calcul checksum: se imparte in bucati de catre 4
+-ipv4-avem 20 grupurix2 bytes=40 bytes
+
+45 00 +..... = 3 fffc (depaseste 4 bytes,deci adunam fffc+3-complement fata de 1)
+fffc + 3 =ffff ->in binar ar fi 1111....111
+
+ICMP(Internet control message protocol)
+                    T   C
+ECHO(request):      8   0
+REPLY:              0   0  
+
+
+
+DHCP(Dynamic host configuration protocol)
+avem nevoie de:
+    ip,
+    masca,
+    gateway-ne asigura conexiunea cu exterioru
+    DNS(domain name service)-serviciu de nume, translatare dintre nume si IP
+    ex: www.google.com ->adresa IP
+
+Pasi de alocare dinamica(adrese) pentru client->server
+C                                      S
+    ->discovery 255.255.255.255
+                offer<-
+                ->request
+                ack<-
+     -serveru ne-a asigurat o adresa ip care este pe timp limitat
+daca nu merge netu-> primim o adresa IP de la OS: 169.254.x.x            
+-UDP-foloseste cea mai mare adresa din clasa respectiva(broadcast)
+
+DHCP Relay-in fiecare server exista un serviciu ce preia cererile de DHCP
+in retea si le transmite in spate, astfel incat sa le avem in acelasi loc
+ex: proxy
+
+-in retelele locale folosim RIP.
+
+
+virus: red coat-a fost nested pe 50 mil calculatoare si la o anumita data a atacat microsoft.com
+

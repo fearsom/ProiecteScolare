@@ -1,0 +1,17 @@
+file system
+FS linux/linux (file system)
+SO: -kernel space-hardwere:  cpu-process management ; hdd-FS ; RAM -memeory management
+	-user space : ckdsk (check disck / mkfs  (make file system)
+
+	FS in linux: ext3  /  ext4 / jfs / btrfs 
+	VFS (virtual file system) :  lvm / 
+
+	snapshot-stare actuala a sistemului dpdv at FS , toate informatiile sunt sub forma de backup
+
+	/ - se refera la root
+	Comenzi: ls -l /
+	rwx - read write execute (sunt 3- user/grup/others)
+	sudo- switch user and do execute
+
+	MOUNT
+	sda,apoi noul disc vine sdb

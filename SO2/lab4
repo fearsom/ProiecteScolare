@@ -1,0 +1,10 @@
+Directoare.
+
+Lista de directoare:
+    -i-node +denumire
+    - / ->directorul root
+    $ -comanda executata ca si utilizator simplu
+    # -comanda executata ca si root
+
+    ls /dir1/{file1,file2} - selecteaza doar aceste fisiere
+    -pt a lua mai multe argumente: " .... "

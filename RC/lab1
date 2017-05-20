@@ -1,0 +1,11 @@
+datagram-mesaj transmis
+compilare: python nume.py
+cat etc/services
+nc-net cut
+
+
+
+
+//program
+import socket
+server_socket = socket.socket(socket.AF)

@@ -1,0 +1,44 @@
+www.info.uvt.ro/~silviu/store/so2/tema1
+sys/stat.h
+
+sistemul de fisier (unix)
+
+
+boot sector:  Kernel + boat loader
+-------
+super block
+-------
+inode
+-------
+block package
+
+
+I-NODE: information node-lista de intrari,toate fisierele existente pe disc
+Ea contne inode_number
+
+
+fragmentarea discului: problema informatie,spatiu liber,informatie..etc
+boat loader: program care stie sa incarca kernelul,care la randul lui incarca SO
+2 tipuri de linkuri: simbolik link si hard link
+Simbolik link: shorcut to a program,fac referire la un I-node,care la randul
+                lui face referinta la un fisier
+Hard link: informatia pe care o putem extrage folosind strctura stat
+-2 fisiere cu acelasi continut dar cu 2 I-noduri diferite
+
+daca I-node(nr de referite)=0 nu exista vreo referinta ,putem sterge fisiereul
+                           =1 avem referinta,nu putem sterge
+
+
+relativ:calea normala
+absolu: calea root
+. ->referinta la directorul curent
+.. ->referinta la directorul root
+
+Comenzi:
+    ls -loi
+    ls -la a/
+    rm (nr director)
+
+
+
+

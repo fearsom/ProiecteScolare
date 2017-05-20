@@ -1,0 +1,66 @@
+https://users.info.uvt.ro/~silviu/store/retele/?dir=lab5
+ping - masoara latenta
+ex: ping k.ro
+7 nivele: l7-aplicatii
+L1-fizic->bit (unitate de incapsulare a informatiei-ce transmite)
+L2-legatura de date->cadre (frame)
+Nivelul 2:
+SRC | DST | TIP |VLAN|PAYLOAD | suma de control(CRC)
+6B  | 6B  | 2B  |    |1522B  |   4B
+MAC | MAC |     |         |
+sursa |destinatie|....
+VLAN-valori intre 1-4096 de numar de VLAN
+-cand se fac VLAN trebuie sa avut grija la izolarea fizica (sa nu se duca in alt calculator)
+
+
+
+
+
+
+-primele caractere din SRC se refera la producator
+SRC-gasim o adresa MAC intr-o reprezentare hexa,ea e reprezentata pe 8b sau 1B ,
+AA:BB:CC:DD:EE:FF
+suma de control-se verifica daca nu a fost modific datorita interferentelor
+TIP-poate sa reprezinte -lungimea cadru IF <=1500 Ethernet 802:3 -nu mai e folosit
+                        -tip cadru IF >1535 DIX Ethernet/ Ethernet II
+-o retea fizica e unica
+cele mai foloste retele: LAN,WAN(wide area network),WLAN(wireless LAN)
+-noi lucram cu LAN
+
+Pasi:-pt LAN
+1.Verifica o lista interna cu mapari IP_MAC
+2.Daca nu are adresa in lista face un BROADCAST (FF:FF...:FF)->request->cere MAC(pt adresa IP2)
+-se cere FF:FF-pt ca aceasta este cea mai mare adresa in hexa
+3.Primim Reply->IP2(MAC2)
+Pasii 1,2,3 poarta denumirea de adress rezolution protocol-ARP
+4.Mapare IP2-MAC2
+-putem sa ne schimbam adresa fizica pe placa de retea(ip/mac) si o protectie de switch nu va
+permite ca 2 useri cu acelasi mac sa se conecteze la internet fie prin cablu/wifi
+
+PASI: -pt WAN (exterior)
+1.Verificam daca adresa de destinatie este in lista de ip-uri
+2.Daca nu..pachetul va fi trimis catre pacetul default-gateway-adica pleaca din retea
+3.Creeam frame si trimitem mai departe catre router,apoi catre ISP...router..utilizator
+
+
+obs: 10.11.3.30/22 -22 reprezinta primii 22 de biti sunt 1 restul sunt 0 (se refera la masca-mask)
+VLAN (802.1.Q) 802.*-codificari ISO,VLAN-virtual LAN
+Comenzi:
+ai route show - adresa de routare
+arp -n ->lista de adrese cu care am lucrat
+mtr 8.8.8.8 -ne arata toata fragmentele de la ip-ul nostru pana la ip-ul dat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

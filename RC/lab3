@@ -1,0 +1,24 @@
+ssh-secure socket shell
+wget - comanda pt download
+fg-readuce procesul suspendat in forground
+adresa masinii: ifconfig --inet addr: 10
+netstat -
+telnet  "se pune:" ip port
+
+tcp/udp- protocoale
+UPD:
+nu avem nevoie de conexiune, foloseste o datagrama,nu ne intereseaza daca ajunge sau nu.
+netmask:  orice adresa ipv4 are asociata o masca-ne spune ce parte din ip tine de retea si care face parte din clienti(membrii retelei), o adresa de retea fara netmask nu contine nimik
+o adresa netmask e pe 32 biti ,8 biti pe fiecare,
+255.255.252.0 
+1111 1111 . 1111 1111. 1111 1111 . 0000 0000 -reprezentarea binara
+
+10.0.0.0/8  --/8-numarul de biti de 1
+
+adresa de broastcast-se refera la trimiterea unei adrese de broadcast , pe server udp nu se trece nimik si merge
+
+broadcast-videosteam
+multicast-pt instalare windows pe mai multe sisteme
+
+echo -n MTk0LjEwMi42Mi4xMDU= | base64 -d
+wget http://www.info.uvt.ro/~silviu/store/tcp-server.pg

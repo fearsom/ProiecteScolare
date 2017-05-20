@@ -1,0 +1,32 @@
+continuare level2:
+STP( spanning tree protocol)
+switch este identificat: -priority ID : este de tip putere a lui 4096^...(default:32768)
+                         -adresa MAC
+pasi:
+1.Root bridge(cel mai mic priority ID),sau concatenam priorityID:MAC
+2.Root port(distanta cea mai scurta de la radacina la port)
+3.Designated port (-> unde se indreapta optiunea)
+4.Porturile care nu sunt DP sau RT le executam blocking port
+
+
+
+
+Comenzi:
+url www.goggle.ro - se conecteaza prin protocolul http, se conecteaza prin portul
+80 (port-poarta de acces,o mapare, prin care acele pachete cu portul respectiv
+    sunt luate de pe fir si sunt realizate)
+coduri:
+    200-ok
+    404-not found
+    403 not authorized
+    301-redirect
+
+pe nivele cum e transmis mesajul: html->http->tcp->ipv4->ethernet II (server)
+
+overhead: 5% din total informatia transmisa
+
+
+
+
+
+    
